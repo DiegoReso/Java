@@ -9,7 +9,7 @@ public class Tabuada {
         int numero = scanner.nextInt();
 
         for (int i = 0; i <= 10; i++) {
-            System.out.println(numero + " x " + i + " = " + numero * i );
+            System.out.println(numero + " x " + i + " = " + (numero * i) );
         }
 
     }
