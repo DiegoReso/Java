@@ -29,7 +29,7 @@ public class Condicionais {
         }
 
 
-        int idade = 18;
+        int idade = 19;
         boolean temCarteira = false;
         
 
@@ -51,6 +51,19 @@ public class Condicionais {
         }else{
             System.out.println("Usuario ou eh menor de 18 anos ou nao tem carteira");
         }
+
+        switch (idade) {
+            case 19:
+                System.out.println(" A idade bateu na primeira opcao do switch");
+                break;
+            case 18:
+                System.out.println("A idade bateu com a segunda opcao do swtich");
+                break;
+            default:
+                System.out.println("A idade nao bateu com nenhuma opcao");
+                break;
+        }
+
     }
 
 }
