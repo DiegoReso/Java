@@ -1,6 +1,5 @@
 package funcoes_builtin;
 
-import exercicios.exe1;
 
 public class builtIn {
     public static void main(String[] args) {

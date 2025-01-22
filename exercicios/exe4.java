@@ -20,5 +20,7 @@ public class exe4 {
             default:
                 break;
         }
+
+        scanner.close();
     }
 }
