@@ -64,6 +64,9 @@ public class Condicionais {
                 break;
         }
 
+
+        String nome = 1 + 1 == 2 ? "Diego" : "Taiwane"; 
+        System.out.println(nome);
     }
 
 }
