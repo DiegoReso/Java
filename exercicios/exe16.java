@@ -1,7 +1,5 @@
 package exercicios;
 
-import java.util.Random;
-
 public class exe16 {
     public static void main(String[] args) {
         
