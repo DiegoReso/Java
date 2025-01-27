@@ -11,6 +11,8 @@ public class exe15 {
         String resultado  = ehPrimo(numero) ? "Primo" : "Nao eh um numero primo" ;
         
         System.out.println(resultado);
+
+        scanner.close();
     }
 
     public static boolean ehPrimo(int numero) {
