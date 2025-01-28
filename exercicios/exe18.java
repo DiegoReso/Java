@@ -1,6 +1,5 @@
 package exercicios;
 
-import constante.constante;
 
 public class exe18 {
     public static void main(String[] args) {

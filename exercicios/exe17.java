@@ -11,5 +11,22 @@ public class exe17 {
         }
         
         System.out.println("O fatorial de " + numero + " eh: " + fatorial );
+
+        gerarFibonacci(10);
+    }
+
+    public static void gerarFibonacci(int n){
+
+        int a = 0;
+        int b = 1;
+        System.out.println(a);
+        for (int i = 1; i < n; i++) {
+            System.out.println(b);
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+
+
     }
 }
