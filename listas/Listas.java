@@ -125,6 +125,59 @@ public class Listas {
         System.out.println(Arrays.toString(arrayOriginal));
         System.out.println(Arrays.toString(arrayClone));
 
+        //arrays 2d
+
+        int[][] matriz = {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}
+        };
+
+        System.out.println(matriz[0][2]);
+
+        //criando array 2d vazio e preenchendo
+
+        int [][] tabela = new int[3][3];
+
+        tabela[0][0] = 10;
+        tabela[1][1] = 20;
+        tabela[2][2] = 30;
+
+        for (int[] linha : tabela) {
+            System.out.println(Arrays.toString(linha));
+        }
+
+
+        int [][] grade = new int[4][5];
+
         
+
+        for (int i = 0; i < grade.length; i++) {
+            
+            for (int k = 0; k < grade[i].length; k++) {
+                grade[i][k] = i * k;
+            }
+        }
+
+        System.out.println("grade");
+        for (int[] grad : grade) {
+            System.out.println(Arrays.toString(grad));
+        }
+
+
+        int [][] matrizTeste = new int[2][2];
+
+        matrizTeste [0][0] = 1;
+        matrizTeste [0][1] = 2;
+        matrizTeste [1][0] = 3;
+        matrizTeste [1][1] = 4;
+        
+
+        for (int i = 0; i < matrizTeste.length; i++) {
+            
+            for (int k = 0; k < matrizTeste[i].length; k++) {
+                System.out.println(matrizTeste[i][k]);
+            }
+        }
     }
 }
