@@ -109,6 +109,22 @@ public class Listas {
         
         System.out.println(listaFrutas);
 
+        //reference trap
+
+        int[] arrayOriginal = {1,2,3};
+        //int[] arrayCopia = arrayOriginal;
+
+       // arrayCopia[0] = 10;
+
+        System.out.println(Arrays.toString(arrayOriginal));
+
+        //como evitar
+        int[] arrayClone = arrayOriginal.clone();
+        arrayClone[0] = 50;
+
+        System.out.println(Arrays.toString(arrayOriginal));
+        System.out.println(Arrays.toString(arrayClone));
+
         
     }
 }
