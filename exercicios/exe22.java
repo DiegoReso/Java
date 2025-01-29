@@ -17,6 +17,5 @@ public class exe22 {
             System.out.println(i);
         }
 
-
     }
 }
