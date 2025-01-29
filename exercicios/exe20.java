@@ -32,7 +32,6 @@ public class exe20 {
                     maxContagem = contagem;
                     maisFrequente = arrayInteiros[i];
                 }
-                
             }
         }
        System.out.println("O item mais frequente eh :" + maisFrequente);
