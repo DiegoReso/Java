@@ -30,7 +30,7 @@ public class exe19 {
        System.out.println("Array invertido professor");
        System.out.println(Arrays.toString(numerosCopy));
 
-
+       
 
 
     }   
