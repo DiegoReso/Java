@@ -1,6 +1,5 @@
 package exercicios;
 
-import java.util.Arrays;
 
 public class exe20 {
     public static void main(String[] args) {

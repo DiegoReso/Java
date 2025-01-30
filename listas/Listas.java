@@ -1,10 +1,10 @@
 package listas;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 
-import constante.constante;
+
 
 public class Listas {
     public static void main(String[] args) {
@@ -179,5 +179,92 @@ public class Listas {
                 System.out.println(matrizTeste[i][k]);
             }
         }
+
+
+        //ordenacao array inteiros
+        System.out.println("ordenacao array inteiros");
+        int [] numbers = {1,5,6,3,4,2};
+        Arrays.sort(numbers);
+
+        System.out.println(Arrays.toString(numbers));
+
+
+        //ordenacao array string
+        System.out.println("Ordenacao String");
+        String[] names = {"Diego", "Tata","Juninho","Pamela", "Oksandra"};
+
+        Arrays.sort(names);
+        System.out.println(Arrays.toString(names));
+        Arrays.sort(names, Comparator.reverseOrder());
+        System.out.println(Arrays.toString(names));
+
+        //ordenacao de matriz
+        int[][] matrizBi = {
+            {4,5,1},
+            {3,8,9},
+            {2,3,1}
+        };
+
+        for (int[] is : matrizBi) {
+            System.out.println(Arrays.toString(is));
+        }
+        
+        Arrays.sort(matrizBi, Comparator.comparingInt(a -> a[2]));
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        
+        for (int[] m : matrizBi) {
+            System.out.println(Arrays.toString(m));
+        }
+
+        System.out.println("*********** //manipulacao avancada");
+        //manipulacao avancada 
+        int [] original = {1,2,3,4};
+
+        int [] copia = Arrays.copyOf(original, original.length);
+        
+        System.out.println(Arrays.toString(copia));
+
+        // preenchimento - fill
+        int[] numbersTeste = new int[5];
+
+        Arrays.fill(numbersTeste, 5);
+
+        System.out.println(Arrays.toString(numbersTeste));
+
+        //transformacao de array para stream
+
+        int[] values = {1,2,3,4,5};
+
+        //fazer a soma de todos elementos
+        int sum = Arrays.stream(values).sum();
+
+        System.out.println(sum);
+
+
+        System.out.println("*********** //array dinamico");
+        //array dinamico
+
+        ArrayList<String> frutasTeste = new ArrayList<>();
+        frutasTeste.add("Maca");
+        frutasTeste.add("Pera");
+        frutasTeste.add("Uva");
+        frutasTeste.add("Jaca");
+        frutasTeste.add("Melancia");
+        frutasTeste.add("Abacate");
+
+        System.out.println(frutasTeste);
+        
+        frutasTeste.remove("Maca");
+        
+        System.out.println(frutasTeste);
+        frutasTeste.remove(1);
+
+        System.out.println(frutasTeste);
+
+        System.out.println(frutasTeste.get(1));
+
     }
 }
