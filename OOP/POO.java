@@ -84,7 +84,18 @@ public class POO {
         aluno1.getInformation();
         aluno2.getInformation();
         
+        //exercicio 3
+
+        ContaCorrente contaDiego = new ContaCorrente();
+        contaDiego.deposit(5000);
+        contaDiego.setWithDrawalLimit(500);
+        contaDiego.withDrawal(600);
+
+        System.out.println("Sua conta possui " + contaDiego.getBalance() + " de saldo");
+        
+        
 
     }   
+
     
 }
