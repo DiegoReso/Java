@@ -99,6 +99,19 @@ public class POO {
 
         eletronico.applyDiscount(10);
         eletronico.getInformation();
+
+        //exercicio 5
+
+        LivroBiblioteca livro1 = new LivroBiblioteca();
+
+        livro1.setTitle("Charlotte's web");
+        livro1.setWriter("E.B White");
+        livro1.setAvailable(false);
+
+        livro1.borrowBook();
+        livro1.returnBook();
+        livro1.borrowBook();
+        livro1.borrowBook();
     }       
 
     
