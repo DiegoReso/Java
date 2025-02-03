@@ -59,7 +59,15 @@ public class POO {
         Livro livroTeste = new Livro("Titulo teste", "Diego Reis", 40);
         livroTeste.exibirInfo();
 
+        //Exericio 1
 
+        Celular iphone = new Celular();
+        iphone.marca = "apple";
+        iphone.modelo = "iphone 14 pro max";
+
+        iphone.ligar();
+        iphone.desligar();
+        iphone.usarCelular(30);;
     }
     
 }
