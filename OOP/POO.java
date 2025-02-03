@@ -68,6 +68,23 @@ public class POO {
         iphone.ligar();
         iphone.desligar();
         iphone.usarCelular(30);;
-    }
+
+        //Exercicio 2
+
+        Aluno aluno1 = new Aluno("Diego", 1, 50);
+        System.out.println("O nome do aluno1 eh " + aluno1.getName());
+        
+
+        System.out.println("O nome do aluno1 eh " + aluno1.getName());
+
+        Aluno aluno2 = new Aluno("Taiwane", 2, 0);
+
+        System.out.println("O nome do aluno2 eh " + aluno2.getName());
+
+        aluno1.getInformation();
+        aluno2.getInformation();
+        
+
+    }   
     
 }
