@@ -93,9 +93,13 @@ public class POO {
 
         System.out.println("Sua conta possui " + contaDiego.getBalance() + " de saldo");
         
-        
+        //exercicio 4
 
-    }   
+        ProdutoEletronico eletronico = new ProdutoEletronico("Geladeira", 1500, true);
+
+        eletronico.applyDiscount(10);
+        eletronico.getInformation();
+    }       
 
     
 }
