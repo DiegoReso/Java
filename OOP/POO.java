@@ -112,6 +112,13 @@ public class POO {
         livro1.returnBook();
         livro1.borrowBook();
         livro1.borrowBook();
+
+        //Classe imutavel
+
+
+        ClasseImutavel imutavel = new ClasseImutavel("Diego", 34);
+        imutavel.getName();
+        imutavel.getAge();
     }       
 
     
