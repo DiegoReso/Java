@@ -1,5 +1,7 @@
 package OOP;
 
+import java.util.Arrays;
+
 public class POO {
     public static void main(String[] args) {
         //1 - Criar classe
@@ -119,6 +121,17 @@ public class POO {
         ClasseImutavel imutavel = new ClasseImutavel("Diego", 34);
         imutavel.getName();
         imutavel.getAge();
+
+        String[] meusAlunos = {"Diego", "Taiwane", "Oksanu"};
+
+        ArrayClass alunos = new ArrayClass(meusAlunos);
+        System.out.println(Arrays.toString(alunos.getAlunos()));
+        
+        String[] meusAlunos2 = {"Pamela", "Juninho", "Jao"};
+        
+        alunos.setAlunos(meusAlunos2);
+        
+        System.out.println(Arrays.toString(alunos.getAlunos()));
     }       
 
     
