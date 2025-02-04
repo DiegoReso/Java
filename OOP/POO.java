@@ -1,6 +1,8 @@
 package OOP;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class POO {
     public static void main(String[] args) {
@@ -132,7 +134,41 @@ public class POO {
         alunos.setAlunos(meusAlunos2);
         
         System.out.println(Arrays.toString(alunos.getAlunos()));
+
+
+        //projeto Bilhete
+        ArrayList<Bilhete> bilhetes = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        
+        while(true){
+
+            int[] numerosParaSorteio = new int[6];
+
+            System.out.println("Entre com os numeros a serem sorteados");
+
+            for (int i = 0; i < numerosParaSorteio.length; i++) {
+                numerosParaSorteio[i] = scanner.nextInt();
+                
+            }
+
+            Bilhete bilhete = new Bilhete(numerosParaSorteio);
+            bilhetes.add(bilhete);
+
+            System.out.println("Deseja continuar cadastrando outro bilhete?");
+            String answer = scanner.next();
+
+            System.out.println("Numeros sorteados foram: " + Arrays.toString(bilhete.setRandomNumbers()));
+            System.out.println(bilhete.getResult());
+
+            if(answer.equals("n")){
+                break;
+            }
+
+        }
+
+        
+        scanner.close();
     }       
 
-    
+
 }
