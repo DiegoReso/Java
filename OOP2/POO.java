@@ -24,5 +24,17 @@ public class POO {
         System.out.println(diego.toString());
         System.out.println(diego.hashCode());
 
+
+
+        //heranca com overriding e superclasse
+        Funcionario taiwane = new Funcionario("Taiwane", 1500);
+        taiwane.exibirDetalhes();
+        System.out.println("O calculo de bonus foi: " + taiwane.calcularBonus());
+
+        Gerente gerente = new Gerente("Diego", 1500, 1000);
+        gerente.exibirDetalhes();
+        System.out.println("O calculo de bonus foi: " + gerente.calcularBonus());
+        
+        
     }
 }
