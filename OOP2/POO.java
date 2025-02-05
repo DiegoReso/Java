@@ -11,5 +11,12 @@ public class POO {
         Carro carro1 = new Carro("Ford","Mustang", motor1);
         carro1.exibirInfo();
         
+        //heranca
+
+        Cachorro hanna = new Cachorro("Hanna Bakers");
+        hanna.latir();
+        hanna.emitirSom();
+
+
     }
 }
