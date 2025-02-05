@@ -17,6 +17,12 @@ public class POO {
         hanna.latir();
         hanna.emitirSom();
 
+        //classe object
+
+        Pessoa diego = new Pessoa("Diego", 34);
+        Pessoa jao = new Pessoa("Jao", 18);
+        System.out.println(diego.toString());
+        System.out.println(diego.hashCode());
 
     }
 }
