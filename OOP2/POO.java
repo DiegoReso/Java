@@ -20,7 +20,6 @@ public class POO {
         //classe object
 
         Pessoa diego = new Pessoa("Diego", 34);
-        Pessoa jao = new Pessoa("Jao", 18);
         System.out.println(diego.toString());
         System.out.println(diego.hashCode());
 
@@ -35,6 +34,17 @@ public class POO {
         gerente.exibirDetalhes();
         System.out.println("O calculo de bonus foi: " + gerente.calcularBonus());
         
-        
+        //classe abstrata
+
+        InstrumentoMusical violao = new Violao("Violao");
+        InstrumentoMusical bateria = new Bateria("Bateria");
+
+        violao.exibirDetalhes();
+        bateria.exibirDetalhes();
+
+        violao.tocar();
+        bateria.tocar();
+
+
     }
 }
