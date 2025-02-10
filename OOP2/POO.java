@@ -1,5 +1,7 @@
 package OOP2;
 
+import javax.swing.text.Document;
+
 public class POO {
     public static void main(String[] args) {
       
@@ -51,7 +53,20 @@ public class POO {
         violao.tocar();
         bateria.tocar();
 
-        
+        //interfaces
+        Pagamento cartao = new CartaoCredito();
+        cartao.processarPagamento(100);
+        cartao.exibirRecibo(100);
+
+        Pagamento transferencia = new TransferenciaBancaria();
+        transferencia.processarPagamento(50);
+        transferencia.exibirRecibo(50);
+
+
+        //multiplas interfaces
+        Documento trabalhoPdf = new Documento("trabalho PDF do Diego");
+        trabalhoPdf.imprimir();
+        trabalhoPdf.salvar();
 
     }
 }
