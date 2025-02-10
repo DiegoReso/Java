@@ -73,5 +73,10 @@ public class POO {
         System.out.println(calc.multiplicar(4,8)); 
         System.out.println(calc.somar(1, 5));
 
+
+        //polimorfismo
+        InstrumentoMusical violino = new Violino("Violino");
+        violino.exibirDetalhes();
+        violino.tocar();
     }
 }
