@@ -68,5 +68,10 @@ public class POO {
         trabalhoPdf.imprimir();
         trabalhoPdf.salvar();
 
+        //metodo com default
+        CalculadoraAvancada calc = new CalculadoraAvancada();
+        System.out.println(calc.multiplicar(4,8)); 
+        System.out.println(calc.somar(1, 5));
+
     }
 }
