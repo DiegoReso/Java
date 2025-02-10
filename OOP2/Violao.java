@@ -6,7 +6,10 @@ public class Violao extends InstrumentoMusical {
         super(nome);
     }
 
+    @Override
     public void tocar(){
-        System.out.println("Tocando Violao");
+        System.out.println("Tocando as cordas do " + nome);
     }
+
+    
 }

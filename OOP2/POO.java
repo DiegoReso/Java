@@ -10,6 +10,11 @@ public class POO {
 
         Carro carro1 = new Carro("Ford","Mustang", motor1);
         carro1.exibirInfo();
+
+        Processador processadorIphoneA2 = new Processador("A2", 8, 6);
+
+        Iphone iphone14 = new Iphone("Iphone 14", "ProMax", 256 , processadorIphoneA2);
+        iphone14.getDetailsPhone();
         
         //heranca
 
@@ -36,8 +41,9 @@ public class POO {
         
         //classe abstrata
 
-        InstrumentoMusical violao = new Violao("Violao");
-        InstrumentoMusical bateria = new Bateria("Bateria");
+        
+        InstrumentoMusical violao = new Violao("violao");
+        InstrumentoMusical bateria = new Bateria("bateria");
 
         violao.exibirDetalhes();
         bateria.exibirDetalhes();
@@ -45,6 +51,7 @@ public class POO {
         violao.tocar();
         bateria.tocar();
 
+        
 
     }
 }
