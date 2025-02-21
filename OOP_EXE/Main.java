@@ -18,5 +18,15 @@ public class Main {
         //exercicio3
         Cachorro cachorro = new Cachorro("Cachorro", "Latindo", "Vira Lata");
         cachorro.exibirDetalhe();
+
+        //exercicio4
+        FuncionarioMeioPeriodo fmp = new FuncionarioMeioPeriodo("Diego", 500, 25);
+        FuncionarioTempoIntegral fti = new FuncionarioTempoIntegral("Taiwane",10000);
+
+        fmp.calcularSalario();
+        fmp.adicionarBeneficio("VA");
+
+        fti.calcularSalario();
+        fti.adicionarBeneficio("Plano de saude e VA");
     }
 }
