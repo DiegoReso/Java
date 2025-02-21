@@ -28,5 +28,33 @@ public class Main {
 
         fti.calcularSalario();
         fti.adicionarBeneficio("Plano de saude e VA");
+
+        //exercicio5
+
+        Pilotavel meuHidroAviao = new Hidroaviao();
+        Navegavel meuBarco  = new Barco();
+        Pilotavel meuAviao = new Aviao();
+
+        meuHidroAviao.pilotar();
+
+        meuBarco.navegar();
+
+        meuAviao.pilotar();
+
+        operarVeiculo(meuAviao);
+        operarVeiculo(meuBarco);
+        operarVeiculo(meuHidroAviao);
+
+
+    }
+
+    public static void operarVeiculo(Object veiculo){
+        if(veiculo instanceof Pilotavel){
+            System.out.println("O veiculo eh pilotavel");
+        }
+        
+        if(veiculo instanceof Navegavel){
+            System.out.println("Veiculo eh Navegavel");
+        }
     }
 }
