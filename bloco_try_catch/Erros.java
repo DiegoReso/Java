@@ -38,9 +38,10 @@ public class Erros {
 
         //exececao com throw
         try {
+            validarIdade(25);
             validarIdade(10);
         } catch (Exception e) {
-            System.out.println("MSg: " + e.getMessage());
+            System.out.println("MSg validar idade: " + e.getMessage());
         }
 
         //execao customizada
@@ -64,8 +65,36 @@ public class Erros {
 
         //exception nao verificada
         String texto = null;
-        System.out.println(texto.length());
+        try {
+            System.out.println(texto.length());
+        } catch (NullPointerException e) {
+            System.out.println("Texto esta nulo " + e.getMessage());
+        }
+    
+        try {
+            processarArquivo("/var/www/oi");
+        } catch (FileNotFoundException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }catch(IOException e){
+            System.out.println("Erro: " + e.getMessage());
+        }
 
+        //encadeamento de exececao
+        try {
+            abrirArquivos(null);
+        } catch (Exception e) {
+            System.out.println("Mensagem: " + e.getMessage());
+            System.out.println("Mensagem encadeamento Exception causa: " + e.getCause());
+        }
+
+        //relancar excecoes
+        try {
+            processarDados(null);
+        } catch (Exception e) {
+            System.out.println("Outra coisa ...");
+
+            System.out.println("Pilha de execucao " + e.getStackTrace());
+        }
 
     }
 
@@ -76,5 +105,51 @@ public class Erros {
         }
 
         System.out.println("idade valida: " + idade);
+    }
+
+    public static void processarArquivo(String caminho) throws FileNotFoundException, IOException {
+        if(caminho == null || caminho.isEmpty()){
+            throw new IOException("Caminho invalido");
+        }
+
+        File arquivo = new File(caminho);
+
+        if(!arquivo.exists()){
+            throw new FileNotFoundException("Arquivo nao encontrado");
+        }
+
+        System.out.println("Arquivo encontrado com sucesso!");
+    }
+
+    //encadeamento de exececao
+    public static void abrirArquivos(String caminho){
+        try {
+
+            if(caminho == null){
+                throw new NullPointerException("Caminho nulo");
+            }
+
+            throw new FileNotFoundException("Arquivo nao encontrado encadeamento");
+                
+        } catch (FileNotFoundException e) {
+            
+            NullPointerException npe  = new NullPointerException("Erro ao processar arquivo");
+            npe.initCause(e);
+
+            throw npe;
+
+        }
+    }
+
+    //relancar excecoes
+    public static void processarDados(String dados) throws Exception{
+        try {
+            if(dados ==null){
+                throw new NullPointerException("Os dados sao nulos");
+            }
+        } catch (Exception e) {
+            System.out.println("Tratamento, criacao de log, ...");
+            throw e;
+        }
     }
 }
