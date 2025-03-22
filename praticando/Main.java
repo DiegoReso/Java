@@ -12,8 +12,10 @@ public class Main{
         uno.anoFabricacao = 1965;
         System.out.println(uno.name);
 
+        Pessoa joao = new Pessoa();
+        joao.setNome(null);
+        System.out.println("O nome da pessoa eh: " + joao.getNome());
         
-
     }
 
 }
