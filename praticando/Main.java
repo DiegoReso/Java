@@ -31,9 +31,14 @@ public class Main{
         
 
         Aluno aluno = new Aluno("Diego", "d4343", 100);
-        aluno.setNome("");
+        aluno.setNome("Diego Reis");
+        aluno.getInfo();
 
+        ProdutoEletronico tv = new ProdutoEletronico("Smart TV 65", 3000, true);
         
+        tv.aplicarDesconto(0.2);
+        tv.getInfo();
+
     }   
 
 }

@@ -19,4 +19,14 @@ public class Aluno {
         }
         
     }
+
+    public void setNotaFinal(int notaFinal){
+        if(notaFinal > 0 && notaFinal <= 100){
+            this.notaFinal = notaFinal;
+        }
+    }
+
+    public void getInfo(){
+        System.out.println("Nome do aluno eh: " + nome + " de matricula numero: " + matricula + " e sua nota final foi " + notaFinal);
+    }
 }
