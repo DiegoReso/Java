@@ -13,9 +13,27 @@ public class Main{
         System.out.println(uno.name);
 
         Pessoa joao = new Pessoa();
-        joao.setNome(null);
+        joao.setNome("Jao");
         System.out.println("O nome da pessoa eh: " + joao.getNome());
+
+        Livro livro = new Livro();
+        livro.getInfo();
+
+        Livro meuLivro = new Livro("Reri poter", "Diego Reis",20.22);   
+        meuLivro.getInfo();
+
+        Celular iphone16 = new Celular("Apple", "Iphone 16", 100);  
+        iphone16.getInfo();
+        iphone16.ligarCelular();  
+        iphone16.desligarCelular();
+        iphone16.consumoBateria(20);
+        iphone16.getInfo();
         
-    }
+
+        Aluno aluno = new Aluno("Diego", "d4343", 100);
+        aluno.setNome("");
+
+        
+    }   
 
 }
