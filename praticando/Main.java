@@ -39,6 +39,16 @@ public class Main{
         tv.aplicarDesconto(0.2);
         tv.getInfo();
 
+        LivroBiblioteca livroTeste = new LivroBiblioteca("Cronicas dos Kane", "Rick Riordan", true);
+        livroTeste.setPegarEmprestadoLivro();
+        livroTeste.getInfoLivro();
+
+        livroTeste.setDevolverLivro();
+        livroTeste.getInfoLivro();
+        
+        livroTeste.setDevolverLivro();
+        livroTeste.getInfoLivro();
+
     }   
 
 }
