@@ -78,8 +78,18 @@ public class Main {
         CachorroExercise haninha = new CachorroExercise("Vira Lata", "Hanna Bakers", "AU AU AU AU");
         haninha.exibirDetalhes();
 
+
+        //Exercisio 4 - Heranca com Interface
         FuncionarioTempoIntegral funcionario = new FuncionarioTempoIntegral("Diego", 14);
         System.out.println(funcionario.calcularSalario(150));
         System.out.println(funcionario.adicionarBeneficio(500));
+
+        //Exercicio 5 Multiplas Interfaces
+        Barco barco = new Barco();
+        barco.navegar();
+        barco.operarVeiculo();
+
+        Hidroaviao hidroAviao = new Hidroaviao();
+        hidroAviao.operarVeiculo();
     }
 }
