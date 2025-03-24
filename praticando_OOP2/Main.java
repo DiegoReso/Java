@@ -27,5 +27,14 @@ public class Main {
 
         Quadrado quadrado = new Quadrado(4);
         System.out.println(quadrado.calcularArea());
+
+        System.out.println("//SUPER//");
+        Gerente gerente = new Gerente("Gerente T.I", 10000, 1000);
+
+        Funcionario carlos = new Funcionario("Carlos", 2500);
+        System.out.println(carlos.calcularBonus());
+
+        System.out.println(gerente.calcularBonus());
+        gerente.getDetails();
     }
 }
