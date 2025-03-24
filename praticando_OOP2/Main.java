@@ -61,6 +61,13 @@ public class Main {
         doc.salvar();
         doc.imprimir();
 
+        //Exercicio 1 - Object Composition
+        Endereco end = new Endereco("Tv titia", 20, "RJ");
+        PessoaEndereco pessoaEndereco = new PessoaEndereco("Cailania dos Reis Ferrelu", 31, end);
+
+        pessoaEndereco.exibirDetalhePessoaEndereco();
+
         
+
     }
 }
