@@ -56,5 +56,11 @@ public class Main {
         transferenciaBancaria.processarPagamento(400);
         transferenciaBancaria.exibirRecibo(400);
 
+        System.out.println("//MULTPLAS INTERFACES//");
+        Documento doc = new Documento("DocPDF");
+        doc.salvar();
+        doc.imprimir();
+
+        
     }
 }
