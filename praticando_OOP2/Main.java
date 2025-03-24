@@ -20,5 +20,12 @@ public class Main {
         System.out.println(diego.hashCode());
         System.out.println(diego.toString());
         System.out.println(diego.equals(cailania));
+
+        System.out.println("//Override//");
+        Circulo circulo = new Circulo(3.2);
+        System.out.println(circulo.calcularArea());
+
+        Quadrado quadrado = new Quadrado(4);
+        System.out.println(quadrado.calcularArea());
     }
 }
