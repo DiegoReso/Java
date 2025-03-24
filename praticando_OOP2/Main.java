@@ -13,5 +13,12 @@ public class Main {
         Cachorro hanna = new Cachorro("Hanna Bakers");
         hanna.emitirSom();
         hanna.latir();
+
+        System.out.println("//Object Class//");
+        Pessoa diego =  new Pessoa("Diego", 34);
+        Pessoa cailania =  new Pessoa("cailania", 31);
+        System.out.println(diego.hashCode());
+        System.out.println(diego.toString());
+        System.out.println(diego.equals(cailania));
     }
 }
