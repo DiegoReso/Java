@@ -46,5 +46,15 @@ public class Main {
 
         guitarra.tocar();
         guitarra.exibirDetalhes();
+
+        System.out.println("//INTERFACE//");
+        Pagamento cartaoCredito = new CartaoCredito();
+        cartaoCredito.processarPagamento(200);
+        cartaoCredito.exibirRecibo(200);
+
+        Pagamento transferenciaBancaria = new TransferenciaBancaria();
+        transferenciaBancaria.processarPagamento(400);
+        transferenciaBancaria.exibirRecibo(400);
+
     }
 }
