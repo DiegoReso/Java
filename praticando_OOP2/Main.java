@@ -78,6 +78,8 @@ public class Main {
         CachorroExercise haninha = new CachorroExercise("Vira Lata", "Hanna Bakers", "AU AU AU AU");
         haninha.exibirDetalhes();
 
-
+        FuncionarioTempoIntegral funcionario = new FuncionarioTempoIntegral("Diego", 14);
+        System.out.println(funcionario.calcularSalario(150));
+        System.out.println(funcionario.adicionarBeneficio(500));
     }
 }
