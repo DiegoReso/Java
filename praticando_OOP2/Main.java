@@ -36,5 +36,15 @@ public class Main {
 
         System.out.println(gerente.calcularBonus());
         gerente.getDetails();
+
+        System.out.println("//ABSTRACAO//");
+        InstrumentoMusical bateria = new Bateria("bateria pearl");
+        InstrumentoMusical guitarra = new Guitarra("Guitarra");
+
+        bateria.tocar();
+        bateria.exibirDetalhes();
+
+        guitarra.tocar();
+        guitarra.exibirDetalhes();
     }
 }
