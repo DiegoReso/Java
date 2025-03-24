@@ -2,6 +2,8 @@ public class Main{
 
     public static void main(String[] args) {
         
+
+        //OOP basics
         Cachorro hanna = new Cachorro("Hanna", 8);
         hanna.emitirSom();
 
@@ -49,6 +51,37 @@ public class Main{
         livroTeste.setDevolverLivro();
         livroTeste.getInfoLivro();
 
+        Funcionario funcionario = new Funcionario("Cailania Reso", 8000, "654645");
+        funcionario.exibirDados();
+        //metodo proteced, pode ser aplicado nas classes e subclasses, por isso deixa ser usado aqui na main
+        funcionario.aumentarSalario(20);
+
+        //metodo nao aplicavel fora da propria classe
+        //funcionario.verificarSenha(654545);
+
+        //agora usamos um metodo publico que chama um metodo privado da classe
+        funcionario.autenticar("65445");
+
+        //Classe imutavel
+        //uma vez declarada nao podemos alterar, nem dentro da propria classe
+        PessoaImutavel pessoaImutavel = new PessoaImutavel("Diego Imutavel", 34);
+        pessoaImutavel.getNome();
+        pessoaImutavel.getIdade();
+
+        //encapsulamento de arrays
+        String[] alunosArray = {"Diego", "Cailanis","Roscana"};
+        Turma turmaDaEscola = new Turma(alunosArray);
+
+        for (String alunos : turmaDaEscola.getAlunos()) {
+            System.out.println(alunos);
+        }
+        
+        String[] novosAlunos = {"Jao", "Maria", "Lurdinha"};
+        turmaDaEscola.setAlunos(novosAlunos);
+
+        for (String novos : turmaDaEscola.getAlunos()) {
+            System.out.println(novos);
+        }
     }   
 
 }
