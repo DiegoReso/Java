@@ -24,5 +24,6 @@ public class exe1 {
         String java = "Bem-vindo ao Java";
         System.out.println(ola + " " + java);
 
+        
     }
 }

@@ -74,6 +74,10 @@ public class Main {
         MotoVeiculo motoVeiculo = new MotoVeiculo("Fazer 250", 2014);
         System.out.println(motoVeiculo.acelerar());
 
-        
+        //Exercicio 3 - Utilizando super
+        CachorroExercise haninha = new CachorroExercise("Vira Lata", "Hanna Bakers", "AU AU AU AU");
+        haninha.exibirDetalhes();
+
+
     }
 }
