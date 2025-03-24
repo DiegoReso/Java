@@ -67,7 +67,13 @@ public class Main {
 
         pessoaEndereco.exibirDetalhePessoaEndereco();
 
-        
+        //Exercicio 2 - Inheritance 
+        CarroVeiculo carroVeiculo = new CarroVeiculo("Fusca", 1295);
+        System.out.println(carroVeiculo.acelerar());
 
+        MotoVeiculo motoVeiculo = new MotoVeiculo("Fazer 250", 2014);
+        System.out.println(motoVeiculo.acelerar());
+
+        
     }
 }
