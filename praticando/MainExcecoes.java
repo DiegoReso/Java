@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import bloco_try_catch.SaldoInsuficienteException;
 
 public class MainExcecoes {
@@ -42,6 +46,14 @@ public class MainExcecoes {
         }
         
 
+        try {
+            processarArquivo("adasd");
+        } catch (FileNotFoundException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }catch(IOException e){
+            System.out.println("Erro: " + e.getMessage());
+        }
+
     }
 
     public static void validarIdade(int idade){
@@ -51,5 +63,19 @@ public class MainExcecoes {
         }
 
         System.out.println("Idade valida: " + idade);
+    }
+
+    public static void processarArquivo(String caminho) throws FileNotFoundException, IOException{
+        if(caminho == null || caminho.isEmpty()){
+            throw new IOException("Caminho invalido");
+        }
+
+        File arquivo = new File(caminho);
+
+        if(!arquivo.exists()){
+           throw new FileNotFoundException("Arquivo nao encontrado"); 
+        }
+
+        System.out.println("Arquivo encontrado com sucesso! :)");
     }
 }
