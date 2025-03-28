@@ -5,7 +5,7 @@ import java.io.FileReader;
 public class TrabalhandoComArquivos {
     public static void main(String[] args) {
 
-        //verificada
+        //excecao verificada
         try {
            BufferedReader reader = new BufferedReader(new FileReader("arquivo.txt"));
            String linha = reader.readLine();  

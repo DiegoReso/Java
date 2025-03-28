@@ -54,6 +54,13 @@ public class MainExcecoes {
             System.out.println("Erro: " + e.getMessage());
         }
 
+        try {
+            abrirArquivo(null);
+        } catch (Exception e) {
+            System.out.println("Mensagem: " + e.getMessage());
+            System.out.println("Causa original: " + e.getCause());
+        }
+
     }
 
     public static void validarIdade(int idade){
@@ -77,5 +84,22 @@ public class MainExcecoes {
         }
 
         System.out.println("Arquivo encontrado com sucesso! :)");
+    }
+
+    public static void abrirArquivo(String caminho){
+
+        try {
+            if(caminho == null){
+                throw new NullPointerException("Caminho nulo");
+            }
+
+            throw new FileNotFoundException("Arquivo nao encontrado");
+        } catch (FileNotFoundException e) {
+            
+            NullPointerException npe = new NullPointerException("Erro ao processsar arquivo");
+            npe.initCause(e);
+            throw npe;
+        }
+
     }
 }
