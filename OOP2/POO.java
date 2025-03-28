@@ -1,7 +1,5 @@
 package OOP2;
 
-import javax.swing.text.Document;
-
 public class POO {
     public static void main(String[] args) {
       
