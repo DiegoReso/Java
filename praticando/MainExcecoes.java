@@ -1,3 +1,5 @@
+import bloco_try_catch.SaldoInsuficienteException;
+
 public class MainExcecoes {
     public static void main(String[] args) {
         
@@ -31,7 +33,15 @@ public class MainExcecoes {
             System.out.println("Erro: " + e.getMessage());
         }
         
+        Banco minhaConta = new Banco(5000);
+
+        try {
+            minhaConta.sacar(6000);
+        } catch (SaldoInsuficienteException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
         
+
     }
 
     public static void validarIdade(int idade){
