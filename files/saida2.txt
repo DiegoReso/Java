@@ -1,0 +1,3 @@
+Escrevendo com BufferedWriter
+EScrevendo linha 2
+Testando append
