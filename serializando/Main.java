@@ -31,6 +31,20 @@ public class Main {
         } catch (Exception e) {
             System.out.println("Nao foi possivel deserializar o arquivo!");
         }
+
+        try (FileInputStream imagemParaCopia = new FileInputStream(currentDir + "imagem.jpeg");
+        FileOutputStream imagemCopia = new FileOutputStream(currentDir + "copia_imagem.jpeg");
+        ){
+
+            int byteData;
+
+            while((byteData = imagemParaCopia.read()) != -1){
+                imagemCopia.write(byteData);
+            }
+
+        } catch (Exception e) {
+            System.out.println("Nao foi possivel copiar a imagem!");
+        }
         
     }
 }
