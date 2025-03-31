@@ -1,5 +1,7 @@
 package serializando;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -46,5 +48,23 @@ public class Main {
             System.out.println("Nao foi possivel copiar a imagem!");
         }
         
+
+        try (BufferedInputStream videoParaCopia = new BufferedInputStream(new FileInputStream(currentDir + "video.mp4"));
+            BufferedOutputStream videoCopia = new BufferedOutputStream(new FileOutputStream(currentDir + "copia_video.mp4"))
+        ) {
+            
+            byte[] buffer = new byte[1024]; //buffer 1kb em 1kb
+
+            int bytesLidos;
+
+            while((bytesLidos = videoParaCopia.read(buffer)) != -1 ){
+                videoCopia.write(buffer, 0, bytesLidos);
+            }
+
+            System.out.println("Video copiado com sucesso!");
+
+        } catch (Exception e) {
+            System.out.println("Nao foi possivel copiar video!");
+        }
     }
 }
