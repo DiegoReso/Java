@@ -1,6 +1,6 @@
 package leetcode;
 
-public class LongestCommomPrefix {
+public class LongestCommonPrefix {
 
     public static void main(String[] args) {
 
@@ -15,7 +15,7 @@ public class LongestCommomPrefix {
         }
 
         String firstString = str[0];
-        StringBuilder commomPrefix = new StringBuilder();
+        StringBuilder commonPrefix = new StringBuilder();
 
         for (int i = 0; i < firstString.length(); i++) {
             char currentChar = firstString.charAt(i);
@@ -24,11 +24,11 @@ public class LongestCommomPrefix {
                 String currentString = str[j];
 
                 if (i >= currentString.length() || currentString.charAt(i) != currentChar) {
-                    return commomPrefix.toString();
+                    return commonPrefix.toString();
                 }
             }
-            commomPrefix.append(currentChar);
+            commonPrefix.append(currentChar);
         }
-        return commomPrefix.toString();
+        return commonPrefix.toString();
     }
 }
